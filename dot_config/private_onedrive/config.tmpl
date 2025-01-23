@@ -1,0 +1,10 @@
+# Sync directory: Dynamically set to the user's home directory
+sync_dir = "{{ .chezmoi.homeDir }}"
+
+# Enable or disable logging
+{{- if (hasKey . "log_dir") }}
+log_dir = "{{ .log_dir }}"
+{{ else }}
+log_dir = "/var/log/onedrive"
+{{ end }}
+
