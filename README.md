@@ -64,11 +64,6 @@ To verify that GPG encryption is working:
    echo "Testing" > ~/testfile
    ```
 2. Add the file with encryption:
-   > [!WARNING]
-   > It is very important that you make sure to use the `--encrypt` flag when adding sensitive files, such as SSH keys, files that contain API keys and other sensitive information. Long as you make sure to do this and you have a valid GPG key in your Chezmoi config file you should never have an incident where you accidently commit sensitive information unencrypted.
-
-> [!NOTE]
-> Chezmoi will even warn you if you add a file without the `--encrypt` flag that appears to contain some sort of sensitive information.
 
 ```bash
 chezmoi add --encrypt ~/testfile
@@ -114,6 +109,12 @@ To add a file with encryption:
 ```bash
 chezmoi add --encrypt <file-path>
 ```
+
+> [!WARNING]
+> It is very important that you make sure to use the `--encrypt` flag when adding sensitive files, such as SSH keys, files that contain API keys and other sensitive information. Long as you make sure to do this and you have a valid GPG key in your Chezmoi config file you should never have an incident where you accidently commit sensitive information unencrypted.
+
+> [!NOTE]
+> Chezmoi will even warn you if you add a file without the `--encrypt` flag that appears to contain some sort of sensitive information.
 
 To remove a file from being managed by Chezmoi:
 
