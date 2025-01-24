@@ -1,6 +1,0 @@
-# Sync directory: Set this to /home/astrosteveo if you want to sync your home directory
-sync_dir = "/home/astrosteveo"
-
-# Enable or disable logging
-log_dir = "/var/log/onedrive"
-

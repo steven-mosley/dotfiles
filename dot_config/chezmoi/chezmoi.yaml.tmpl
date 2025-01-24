@@ -1,0 +1,16 @@
+sourceDir: "{{ .chezmoi.sourceDir | default `~/.local/share/chezmoi` }}"
+encryption: gpg
+{{ if (hasKey . "gpg_recipient") }}
+gpg:
+  recipient: "{{ .gpg_recipient }}"
+{{ else }}
+# No GPG recipient defined. Set gpg_recipient in chezmoi.yaml.
+{{ end }}
+ignore:
+  - ".cache"
+  - ".local/share/trash"
+  - ".config/chezmoi"
+  - ".config/onedrive/items.sqlite3"
+  - ".config/onedrive/items.sqlite3-shm"
+  - ".config/onedrive/items.sqlite3-wal"
+  - ".config/onedrive/refreshtoken"
