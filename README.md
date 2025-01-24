@@ -25,7 +25,7 @@ cd dotfiles
 
 ### 2. Run the Bootstrap Script
 
-Run the included `bootstrap-chezmoi.sh` script to set up ChezMoi:
+Run the included `bootstrap-chezmoi.sh` script to set up Chezmoi:
 
 ```bash
 bash scripts/bootstrap-chezmoi.sh
@@ -41,7 +41,19 @@ The script will:
 > [!NOTE]
 > I have not tested this without a GPG key set, so if you run into issues while trying to run `chezmoi apply` to apply the template, re-run the bootstrap script, and just enter a random GPG key string. Just know if you wish to use GPG encryption, you will need to modify your `~/.config/chezmoi/chezmoi.yaml` file with a valud GPG key.
 
-### 3. Test Encryption (Optional, but Recommended)
+### 3. Initialize the Configuration
+
+```bash
+chezmoi init https://github.com/steven-mosley/dotfiles.git
+```
+
+### 4. Apply the Configuration
+
+```bash
+chezmoi apply
+```
+
+### 4. Test Encryption (Optional, but Recommended)
 
 I highly recommend testing encryption and decryption with a test file before using it on files with actual sensitive information.
 
