@@ -53,7 +53,7 @@ chezmoi init https://github.com/steven-mosley/dotfiles.git
 chezmoi apply
 ```
 
-### 4. Test Encryption (Optional, but Recommended)
+### 5. Test Encryption (Optional, but Recommended)
 
 I highly recommend testing encryption and decryption with a test file before using it on files with actual sensitive information.
 
